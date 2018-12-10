@@ -1,0 +1,8 @@
+language: python
+python:
+  - "3.6"
+# command to install dependencies
+install:
+  - pip install unittest2
+  - pip install requests
+script: python milestone_5_tests.py
