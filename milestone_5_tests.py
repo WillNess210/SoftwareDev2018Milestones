@@ -5,16 +5,16 @@ import unittest
 class TestAPICalls(unittest.TestCase):
 	#first call tests a recipe get call, checks if recipe with id 410 call gives back expected result
 	def test_recipe(self):
-		resp = requests.get('https://djibouti-recipe.herokuapp.com/api/recipes/410')
+		resp = requests.get('https://djibouti-recipe.herokuapp.com/api/recipes/790')
 		for res in resp.json():
 			print(res['name'])
-			self.assertEqual(res['name'], "F in the Chat");
+			self.assertEqual(res['name'], "asdf");
 	#second tests checks one of the ingredients (id = 20)
 	def test_ingredient(self):
-		resp = requests.get('https://djibouti-recipe.herokuapp.com/api/ingredients/20')
+		resp = requests.get('https://djibouti-recipe.herokuapp.com/api/ingredients/870')
 		for res in resp.json():
 			print(res['name'])
-			self.assertEqual(res['name'], "waffles");
+			self.assertEqual(res['name'], "asdf");
 	#third test checks on of the users (id = 17)
 	def test_user(self):
 		resp = requests.get('https://djibouti-recipe.herokuapp.com/api/users/17')
